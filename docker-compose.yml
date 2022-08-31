@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+  proxy:
+    image: openresty/openresty:1.21.4.1-3-bullseye
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./scripts:/scripts
